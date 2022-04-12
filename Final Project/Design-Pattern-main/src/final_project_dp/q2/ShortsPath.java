@@ -19,33 +19,6 @@ public class ShortsPath<T> {
         this.visitedVertices = new LinkedHashSet<>();
     }
 
-    // עובד
-//    public Set<T> bfs(IGraph<T> someGraph, Index source){
-//        Node<Index> sourceNode = someGraph.getNode(source);
-//        if(sourceNode == null)
-//            throw new IllegalArgumentException("source node not on the graph");
-//
-//        workingQ.add(sourceNode);
-//        while (!workingQ.isEmpty()){
-//            Node<T> removed = workingQ.pop();
-//            finished.add(removed);
-//            Collection<Node<T>> reachableNodes = someGraph.getReachableNodes(removed);
-//            for (Node<T> reachableNode : reachableNodes){
-//                if(!finished.contains(reachableNode) && !workingQ.contains(reachableNode)){
-//                    workingQ.add(reachableNode);
-//                }
-//            }
-//        }
-//        Set<T> returnSet = new LinkedHashSet<>();
-//        for (Node<T> node: finished){
-//            returnSet.add(node.getData());
-//        }
-//        finished.clear();
-//        someGraph.backToRoot();
-//        return returnSet;
-//    }
-
-    //  עובד
     public LinkedList<Queue<Index>> shortsPath(IGraph<Index> graph, Index source, Index destination) {
 
         LinkedList<Queue<Index>> allPathsFromSourceToDestination = new LinkedList<>();// רשימה הכוללת את כל המסלולים מהמקור ליעד
